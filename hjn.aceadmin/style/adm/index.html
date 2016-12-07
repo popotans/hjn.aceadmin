@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <title>XXX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- basic styles -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+    <![endif]-->
+    <link rel="stylesheet" href="assets/css/ace.min.css" />
+    <link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+    <link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+    <![endif]-->
+    <link href="slidebar-menu/sidebar-menu.css" rel="stylesheet"/>
+    <link href="slidebar-menu/toastr/toastr.min.css" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            font-size: 12px;
+        }
+
+        .nav > li > a {
+            padding: 5px 10px;
+        }
+
+        .tab-content {
+            padding-top: 3px;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default" id="navbar">
+    <div class="navbar-container" id="navbar-container">
+        <div class="navbar-header pull-left" style=";">
+            <a href="#" class="navbar-brand">
+                <small>
+                    <i class="icon-leaf"></i>
+                    后台管理
+                </small>
+            </a>
+        </div>
+        <div style="  float:left; width:400px; height:40px; padding-left:11px; margin-top:2px; color:#fff; ">
+            <!--<div class="topcontent" style="width:96px; margin-top:4px; height:30px; line-height:30px; font-weight:bold;font-size:16px; float:left; cursor:pointer">
+                内容管理
+            </div>
+            <div class="topcontent2" style="width:96px; margin-top:4px;  height:30px; line-height:30px; font-weight:bold;font-size:16px; float:left; cursor:pointer">
+                系统管理
+            </div>-->
+        </div>
+        <div class="navbar-header pull-right" role="navigation">
+            <ul class="nav ace-nav">
+            <li class="green">
+                <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                    <img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />
+                        <span class="user-info">
+                            Niejunhua
+                        </span>
+                </a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+
+
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+       
+        <div class="sidebar" id="sidebar">
+            <script type="text/javascript">
+                try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+            </script>
+            <ul class="nav nav-list" id="menu">
+
+            </ul>
+            <div class="sidebar-collapse" id="sidebar-collapse">
+                <i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+            </div>
+
+            <script type="text/javascript">
+                try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+            </script>
+        </div>
+
+        <div class="main-content">
+            <div class="breadcrumbs" id="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-home home-icon"></i>
+                        <a href="javascript:test()">首页</a>
+                    </li>
+                    <li class="active">权限管理</li>
+                </ul>
+                <div class="nav-search" id="nav-search">
+                    <form class="form-search">
+                                <span class="input-icon">
+                                    <input type="text" placeholder="搜索 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                                    <i class="icon-search nav-search-icon"></i>
+                                </span>
+                    </form>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-xs-12" style="padding-left:5px;">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="active"><a href="#Index" role="tab" data-toggle="tab">首页</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div  class="tab-pane active" id="Index" style="min-height:360px;">
+								欢迎光临
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="icon-double-angle-up icon-only bigger-110"></i>
+    </a>
+    </div>
+
+<script src="assets/js/jquery-1.10.2.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/typeahead-bs2.min.js"></script>
+<script src="assets/js/ace-extra.min.js"></script>
+<script src="assets/js/ace.min.js"></script>
+
+<script src="assets/js/html5shiv.js"></script>
+<script src="assets/js/respond.min.js"></script>
+<script src="assets/js/ace-elements.min.js"></script>
+<script src="assets/js/ace-extra.min.js"></script>
+
+<script src="slidebar-menu/sidebar-menu.js"></script>
+<script src="slidebar-menu/bootstrap-tab.js"></script>
+
+<script type="text/javascript">
+    //toastr.options.positionClass = 'toast-bottom-right';
+    $(function () {
+        function tojson(ddddd) {
+            return eval('('+ddddd+')');
+        }
+
+        $.get("menu.html?1211", {}, function (ddddd, textStatus) {
+            //alert(ddddd);
+            $('#menu').sidebarMenu({
+                data: tojson(ddddd)
+            });
+        });
+
+        $(".topcontent2").click(function () {
+            $.get("menu2.html?1211", {}, function (ddddd, textStatus) {
+                //alert(ddddd);
+                $('#menu').empty();
+                $('#menu').sidebarMenu({
+                    data: tojson(ddddd)
+                });
+            });
+        });
+
+        $(".topcontent").click(function () {
+            $.get("menu.html?1211", {}, function (ddddd, textStatus) {
+                //alert(ddddd);
+                $('#menu').empty();
+                $('#menu').sidebarMenu({
+                    data: tojson(ddddd)
+                });
+            });
+        });
+    });
+</script>
+</body>
+
+</html>
+

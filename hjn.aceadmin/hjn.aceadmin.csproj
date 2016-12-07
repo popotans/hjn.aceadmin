@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D5BCF25F-FF24-4A63-8C05-DCE518286DDD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>hjn.aceadmin</RootNamespace>
+    <AssemblyName>hjn.aceadmin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="style\adm\assets\avatars\avatar.png" />
+    <Content Include="style\adm\assets\avatars\avatar1.png" />
+    <Content Include="style\adm\assets\avatars\avatar2.png" />
+    <Content Include="style\adm\assets\avatars\avatar3.png" />
+    <Content Include="style\adm\assets\avatars\avatar4.png" />
+    <Content Include="style\adm\assets\avatars\avatar5.png" />
+    <Content Include="style\adm\assets\avatars\profile-pic.jpg" />
+    <Content Include="style\adm\assets\avatars\user.jpg" />
+    <Content Include="style\adm\assets\css\ace-ie.min.css" />
+    <Content Include="style\adm\assets\css\ace-rtl.min.css" />
+    <Content Include="style\adm\assets\css\ace-skins.min.css" />
+    <Content Include="style\adm\assets\css\ace.min.css" />
+    <Content Include="style\adm\assets\css\bootstrap-editable.css" />
+    <Content Include="style\adm\assets\css\bootstrap-timepicker.css" />
+    <Content Include="style\adm\assets\css\bootstrap.min.css" />
+    <Content Include="style\adm\assets\css\chosen.css" />
+    <Content Include="style\adm\assets\css\colorbox.css" />
+    <Content Include="style\adm\assets\css\colorpicker.css" />
+    <Content Include="style\adm\assets\css\datepicker.css" />
+    <Content Include="style\adm\assets\css\daterangepicker.css" />
+    <Content Include="style\adm\assets\css\dropzone.css" />
+    <Content Include="style\adm\assets\css\font-awesome-ie7.min.css" />
+    <Content Include="style\adm\assets\css\font-awesome.min.css" />
+    <Content Include="style\adm\assets\css\fullcalendar.css" />
+    <Content Include="style\adm\assets\css\images\loading.gif" />
+    <Content Include="style\adm\assets\css\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="style\adm\assets\css\jquery-ui-1.10.3.full.min.css" />
+    <Content Include="style\adm\assets\css\jquery.gritter.css" />
+    <Content Include="style\adm\assets\css\select2.css" />
+    <Content Include="style\adm\assets\css\ui.jqgrid.css" />
+    <Content Include="style\adm\assets\images\gallery\image-1.jpg" />
+    <Content Include="style\adm\assets\images\gallery\image-2.jpg" />
+    <Content Include="style\adm\assets\images\gallery\image-3.jpg" />
+    <Content Include="style\adm\assets\images\gallery\image-4.jpg" />
+    <Content Include="style\adm\assets\images\gallery\image-5.jpg" />
+    <Content Include="style\adm\assets\images\gallery\image-6.jpg" />
+    <Content Include="style\adm\assets\images\gallery\thumb-1.jpg" />
+    <Content Include="style\adm\assets\images\gallery\thumb-2.jpg" />
+    <Content Include="style\adm\assets\images\gallery\thumb-3.jpg" />
+    <Content Include="style\adm\assets\images\gallery\thumb-4.jpg" />
+    <Content Include="style\adm\assets\images\gallery\thumb-5.jpg" />
+    <Content Include="style\adm\assets\images\gallery\thumb-6.jpg" />
+    <Content Include="style\adm\assets\js\ace-elements.min.js" />
+    <Content Include="style\adm\assets\js\ace-extra.min.js" />
+    <Content Include="style\adm\assets\js\ace.min.js" />
+    <Content Include="style\adm\assets\js\additional-methods.min.js" />
+    <Content Include="style\adm\assets\js\bootbox.min.js" />
+    <Content Include="style\adm\assets\js\bootstrap-colorpicker.min.js" />
+    <Content Include="style\adm\assets\js\bootstrap-tag.min.js" />
+    <Content Include="style\adm\assets\js\bootstrap-wysiwyg.min.js" />
+    <Content Include="style\adm\assets\js\bootstrap.min.js" />
+    <Content Include="style\adm\assets\js\chosen.jquery.min.js" />
+    <Content Include="style\adm\assets\js\date-time\bootstrap-datepicker.min.js" />
+    <Content Include="style\adm\assets\js\date-time\bootstrap-timepicker.min.js" />
+    <Content Include="style\adm\assets\js\date-time\daterangepicker.min.js" />
+    <Content Include="style\adm\assets\js\date-time\moment.min.js" />
+    <Content Include="style\adm\assets\js\dropzone.min.js" />
+    <Content Include="style\adm\assets\js\excanvas.min.js" />
+    <Content Include="style\adm\assets\js\flot\jquery.flot.min.js" />
+    <Content Include="style\adm\assets\js\flot\jquery.flot.pie.min.js" />
+    <Content Include="style\adm\assets\js\flot\jquery.flot.resize.min.js" />
+    <Content Include="style\adm\assets\js\fuelux\data\fuelux.tree-sampledata.js" />
+    <Content Include="style\adm\assets\js\fuelux\fuelux.spinner.min.js" />
+    <Content Include="style\adm\assets\js\fuelux\fuelux.tree.min.js" />
+    <Content Include="style\adm\assets\js\fuelux\fuelux.wizard.min.js" />
+    <Content Include="style\adm\assets\js\fullcalendar.min.js" />
+    <Content Include="style\adm\assets\js\html5shiv.js" />
+    <Content Include="style\adm\assets\js\jqGrid\i18n\grid.locale-en.js" />
+    <Content Include="style\adm\assets\js\jqGrid\jquery.jqGrid.min.js" />
+    <Content Include="style\adm\assets\js\jquery-1.10.2.min.js" />
+    <Content Include="style\adm\assets\js\jquery-2.0.3.min.js" />
+    <Content Include="style\adm\assets\js\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="style\adm\assets\js\jquery-ui-1.10.3.full.min.js" />
+    <Content Include="style\adm\assets\js\jquery.autosize.min.js" />
+    <Content Include="style\adm\assets\js\jquery.colorbox-min.js" />
+    <Content Include="style\adm\assets\js\jquery.dataTables.bootstrap.js" />
+    <Content Include="style\adm\assets\js\jquery.dataTables.min.js" />
+    <Content Include="style\adm\assets\js\jquery.easy-pie-chart.min.js" />
+    <Content Include="style\adm\assets\js\jquery.gritter.min.js" />
+    <Content Include="style\adm\assets\js\jquery.hotkeys.min.js" />
+    <Content Include="style\adm\assets\js\jquery.inputlimiter.1.3.1.min.js" />
+    <Content Include="style\adm\assets\js\jquery.knob.min.js" />
+    <Content Include="style\adm\assets\js\jquery.maskedinput.min.js" />
+    <Content Include="style\adm\assets\js\jquery.mobile.custom.min.js" />
+    <Content Include="style\adm\assets\js\jquery.nestable.min.js" />
+    <Content Include="style\adm\assets\js\jquery.slimscroll.min.js" />
+    <Content Include="style\adm\assets\js\jquery.sparkline.min.js" />
+    <Content Include="style\adm\assets\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="style\adm\assets\js\jquery.validate.min.js" />
+    <Content Include="style\adm\assets\js\markdown\bootstrap-markdown.min.js" />
+    <Content Include="style\adm\assets\js\markdown\markdown.min.js" />
+    <Content Include="style\adm\assets\js\respond.min.js" />
+    <Content Include="style\adm\assets\js\select2.min.js" />
+    <Content Include="style\adm\assets\js\typeahead-bs2.min.js" />
+    <Content Include="style\adm\assets\js\x-editable\ace-editable.min.js" />
+    <Content Include="style\adm\assets\js\x-editable\bootstrap-editable.min.js" />
+    <Content Include="style\adm\index.html" />
+    <Content Include="style\adm\Menu.aspx" />
+    <Content Include="style\adm\menu.html" />
+    <Content Include="style\adm\menu2.html" />
+    <Content Include="style\adm\slidebar-menu\bootstrap-tab - 复制.js" />
+    <Content Include="style\adm\slidebar-menu\bootstrap-tab.js" />
+    <Content Include="style\adm\slidebar-menu\bootstrap-tab2.js" />
+    <Content Include="style\adm\slidebar-menu\sidebar-menu - 复制.js" />
+    <Content Include="style\adm\slidebar-menu\sidebar-menu.css" />
+    <Content Include="style\adm\slidebar-menu\sidebar-menu.js" />
+    <Content Include="style\adm\slidebar-menu\sidebar-menu2.js" />
+    <Content Include="style\adm\slidebar-menu\toastr\toastr.css" />
+    <Content Include="style\adm\slidebar-menu\toastr\toastr.min.css" />
+    <Content Include="style\adm\slidebar-menu\toastr\toastr.min.js" />
+    <Content Include="style\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="style\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="style\bootstrap\css\bootstrap.css" />
+    <Content Include="style\bootstrap\css\bootstrap.min.css" />
+    <Content Include="style\bootstrap\js\bootstrap.js" />
+    <Content Include="style\bootstrap\js\bootstrap.min.js" />
+    <Content Include="style\bootstrap\js\npm.js" />
+    <Content Include="style\images\inputradio.png" />
+    <Content Include="style\images\jiahao.png" />
+    <Content Include="style\images\jianhao.png" />
+    <Content Include="style\images\lieshi.png" />
+    <Content Include="style\images\shangjiantou.png" />
+    <Content Include="style\images\xiajiantou.png" />
+    <Content Include="style\images\xiangxia.png" />
+    <Content Include="style\images\youjiantou.png" />
+    <Content Include="style\images\youshi.png" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdmController.cs" />
+    <Compile Include="Controllers\AdmMenuController.cs" />
+    <Compile Include="Controllers\ContentController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="style\adm\Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="style\adm\Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="style\adm\assets\avatars\Thumbs.db" />
+    <Content Include="style\adm\assets\css\images\Thumbs.db" />
+    <Content Include="style\adm\assets\font\fontawesome-webfont.woff" />
+    <Content Include="style\adm\assets\font\glyphicons-halflings-regular.eot" />
+    <Content Include="style\adm\assets\font\glyphicons-halflings-regular.svg" />
+    <Content Include="style\adm\assets\font\glyphicons-halflings-regular.ttf" />
+    <Content Include="style\adm\assets\font\glyphicons-halflings-regular.woff" />
+    <Content Include="style\adm\assets\font\glyphicons-halflings-regular.woff2" />
+    <Content Include="style\adm\slidebar-menu\toastr\toastr.js.map" />
+    <Content Include="style\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="style\bootstrap\css\bootstrap.css.map" />
+    <Content Include="style\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="style\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="style\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="style\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="style\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="style\images\阅文年假问题描述.docx" />
+    <Content Include="Views\Adm\Index.cshtml" />
+    <Content Include="Views\AdmMenu\GetMenus.cshtml" />
+    <Content Include="Views\Content\Index.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7515</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:7515/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
