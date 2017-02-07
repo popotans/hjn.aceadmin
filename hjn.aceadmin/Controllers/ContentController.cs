@@ -9,7 +9,7 @@ namespace hjn.aceadmin.Controllers
     public class ContentController : Controller
     {
         // GET: Content
-        public ActionResult Index()
+        public ActionResult ContentIndex()
         {
             return View();
         }

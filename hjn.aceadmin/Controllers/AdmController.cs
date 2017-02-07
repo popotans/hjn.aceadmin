@@ -13,5 +13,20 @@ namespace hjn.aceadmin.Controllers
         {
             return View();
         }
+
+        public ActionResult IndexNoIframe()
+        {
+            return View();
+        }
+
+        public ActionResult IndexNoIframeWithLayout()
+        {
+            return View();
+        }
+
+        public ActionResult AdmEmpIndex()
+        {
+            return View();
+        }
     }
 }

@@ -1,0 +1,243 @@
+﻿@model dynamic
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <title>后台NoIframe管理模版</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- basic styles -->
+    <link rel="stylesheet" href="/style/adm/assets/css/font-awesome.min.css" />
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+    <![endif]-->
+    <link rel="stylesheet" href="/style/adm/assets/css/ace.min.css" />
+    <link href="~/style/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/style/adm/assets/css/ace-rtl.min.css" />
+    <link rel="stylesheet" href="/style/adm/assets/css/ace-skins.min.css" />
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="/style/adm/assets/css/ace-ie.min.css" />
+    <![endif]-->
+    <link href="/style/adm/slidebar-menu/sidebar-menu.css" rel="stylesheet" />
+    <link href="/style/adm/slidebar-menu/toastr/toastr.min.css" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            font-size: 12px;
+        }
+
+        .nav > li > a {
+            padding: 5px 10px;
+        }
+
+        .tab-content {
+            padding-top: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-default" id="navbar">
+        <div class="navbar-container" id="navbar-container">
+            <div class="navbar-header pull-left" style=";">
+                <a href="#" class="navbar-brand">
+                    <small>
+                        <i class="icon-leaf"></i>
+                        后台管理NoIframe
+                    </small>
+                </a>
+            </div>
+            <div style="  float:left; width:400px; height:40px; padding-left:11px; margin-top:2px; color:#fff; ">
+                <!--<div class="topcontent" style="width:96px; margin-top:4px; height:30px; line-height:30px; font-weight:bold;font-size:16px; float:left; cursor:pointer">
+                    内容管理
+                </div>
+                <div class="topcontent2" style="width:96px; margin-top:4px;  height:30px; line-height:30px; font-weight:bold;font-size:16px; float:left; cursor:pointer">
+                    系统管理
+                </div>-->
+            </div>
+            <div class="navbar-header pull-right" role="navigation">
+                <ul class="nav ace-nav">
+                    <li class="green">
+                        <a data-toggle="dropdown" href="/home/logout" title="点击退出登录" onclick="if (confirm('确定退出？')) { window.location.href = '/home/logout'; }" class="dropdown-toggle">
+                            <img class="nav-user-photo" src="/style/adm/assets/avatars/user.jpg" alt="Jason's Photo" />
+                            <span class="user-info">
+                                @Html.Raw("niejunhua")
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container" id="main-container">
+        <script type="text/javascript">
+            try { ace.settings.check('main-container', 'fixed') } catch (e) { }
+        </script>
+        <div class="main-container-inner">
+            <a class="menu-toggler" id="menu-toggler" href="#">
+                <span class="menu-text"></span>
+            </a>
+            <div class="sidebar" id="sidebar">
+                <script type="text/javascript">
+                    try { ace.settings.check('sidebar', 'fixed') } catch (e) { }
+                </script>
+                <div class="sidebar-collapse" id="sidebar-collapse">
+                    <i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+                </div>
+                <ul class="nav nav-list" id="menu" style=""></ul>
+                <script type="text/javascript">
+                    try { ace.settings.check('sidebar', 'collapsed') } catch (e) { }
+                </script>
+            </div>
+
+            <div class="main-content">
+                <div class="breadcrumbs" id="breadcrumbs" style="">
+                    <ul class="breadcrumb">
+                        <li>
+                            <i class="icon-home home-icon"></i>
+                            <a href="javascript:test()">首页</a>
+                        </li>
+                        <li class="active">权限管理</li>
+                    </ul>
+                    @*
+                            <div class="nav-search" id="nav-search">
+                                <form class="form-search">
+                                    <span class="input-icon">
+                                        <input type="text" placeholder="搜索 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                                        <i class="icon-search nav-search-icon"></i>
+                                    </span>
+                                </form>
+                            </div>
+                        </div>*@
+                    <div class="page-content">
+                        <div class="row">
+                            <div class="col-xs-12" style="padding-left:5px;">
+                                @*<ul class="nav nav-tabs" role="tablist">
+                                        <li class="active"><a href="#Index" role="tab" data-toggle="tab">首页</a></li>
+                                    </ul>*@
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="IndexTabPpane" style="min-height: 360px;">
+                                        <div>
+                                            欢迎使用！
+                                        </div>
+                                        <table class="table table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th width="200">键</th>
+                                                    <th>值</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>名称</td>
+                                                    <td>后台管理模版</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>版本</td>
+                                                    <td>2017-01-25-v.1040</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>名称</td>
+                                                    <td>后台管理模版</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+                <i class="icon-double-angle-up icon-only bigger-110"></i>
+            </a>
+        </div>
+        <script>
+
+        </script>
+
+        <script src="/style/adm/assets/js/jquery-1.10.2.min.js"></script>
+        <script src="/style/adm/assets/js/bootstrap.min.js"></script>
+        <script src="/style/adm/assets/js/typeahead-bs2.min.js"></script>
+        <script src="/style/adm/assets/js/ace-extra.min.js"></script>
+        <script src="/style/adm/assets/js/ace.min.js"></script>
+        <script src="/style/adm/assets/js/html5shiv.js"></script>
+        <script src="/style/adm/assets/js/respond.min.js"></script>
+        <script src="/style/adm/assets/js/ace-elements.min.js"></script>
+        <script src="/style/adm/assets/js/ace-extra.min.js"></script>
+        <script src="/style/adm/slidebar-menu/sidebar-menu.js"></script>
+        @*<script src="/style/adm/slidebar-menu/bootstrap-tab.js"></script>*@
+        <script>
+
+        </script>
+
+        <script type="text/javascript">
+            function laywin(title, url, width, height) {
+                var index = layer.open({
+                    title: title,
+                    type: 2,
+                    area: [width, height],
+                    fix: true, //不固定
+                    maxmin: true,
+                    content: url
+                });
+            }
+
+            function laymsgsuc(msg, calback) {
+                layer.alert(msg, {
+                    icon: 1,
+                }, calback);
+            }
+
+            function laymsgfal(msg, calback) {
+                layer.alert(msg, {
+                    icon: 2,
+                }, calback);
+            }
+            //toastr.options.positionClass = 'toast-bottom-right';
+            $(function () {
+                function tojson(ddddd) {
+                    return eval('(' + ddddd + ')');
+                }
+
+                $.get("@Url.Action("GetMenus","AdmMenu")?1211", {}, function (ddddd, textStatus) {
+                    //alert(ddddd);
+                    $('#menu').sidebarMenu({
+                        data: tojson(ddddd)
+                    });
+                });
+
+                $(".topcontent2").click(function () {
+                    $.get("menu2.html?1211", {}, function (ddddd, textStatus) {
+                        //alert(ddddd);
+                        $('#menu').empty();
+                        $('#menu').sidebarMenu({
+                            data: tojson(ddddd)
+                        });
+                    });
+                });
+
+                $(".topcontent").click(function () {
+                    $.get(" @Url.Action("GetMenus","AdmMenu")", {}, function (ddddd, textStatus) {
+                        //alert(ddddd);
+                        $('#menu').empty();
+                        $('#menu').sidebarMenu({
+                            data: tojson(ddddd)
+                        });
+                    });
+                });
+
+                var height = $(window).height();
+                $("#IndexTabPpane").css("min-height", (height - 180) + 'px');
+            });
+        </script></div>
+</body>
+</html>
